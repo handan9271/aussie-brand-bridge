@@ -1,27 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Store, Users, TrendingUp, Target } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const KeyAdvantages = () => {
+  const { t } = useLanguage();
+  
   const advantages = [
     {
       icon: Store,
-      title: "Retail Expertise",
-      description: "Founders bring 10+ years of leadership in Australian retail chain management."
+      title: t('retailExpertise'),
+      description: t('retailExpertiseDesc')
     },
     {
       icon: Users,
-      title: "Integrated Market Access", 
-      description: "Strong presence across Chinese community channels, mainstream retailers, and cold-chain logistics—bridging awareness to shelf placement."
+      title: t('integratedAccess'), 
+      description: t('integratedAccessDesc')
     },
     {
       icon: TrendingUp,
-      title: "Marketing Excellence",
-      description: "Expertise in TikTok, Xiaohongshu, Instagram campaigns, plus pop-up activations that drive measurable engagement."
+      title: t('marketingExcellence'),
+      description: t('marketingExcellenceDesc')
     },
     {
       icon: Target,
-      title: "Scalable Growth Model",
-      description: "A proven, repeatable playbook — validate through pilot campaigns, then expand into full-scale retail distribution."
+      title: t('scalableGrowth'),
+      description: t('scalableGrowthDesc')
     }
   ]
 
@@ -30,11 +33,11 @@ const KeyAdvantages = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Key <span className="hero-text">Advantages</span>
+            {t('keyAdvantages')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-secondary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our unique combination of expertise, access, and proven methodologies sets us apart in the market.
+            {t('advantagesSubtitle')}
           </p>
         </div>
 

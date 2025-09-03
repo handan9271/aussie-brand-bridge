@@ -1,42 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Lightbulb, Megaphone, ShoppingCart, Settings } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const ServicePortfolio = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: Lightbulb,
-      title: "Brand Incubation & Localization",
-      items: [
-        "Market research & consumer insights",
-        "Product positioning & localized packaging",
-        "Regulatory compliance & import facilitation"
-      ]
+      title: t('brandIncubation'),
+      items: (t('brandIncubationItems') as any) || []
     },
     {
       icon: Megaphone,
-      title: "Integrated Marketing & Promotion",
-      items: [
-        "KOL/KOC engagement & paid social media campaigns",
-        "Pop-up events & trade show execution", 
-        "IP collaborations & viral content strategy"
-      ]
+      title: t('integratedMarketing'),
+      items: (t('integratedMarketingItems') as any) || []
     },
     {
       icon: ShoppingCart,
-      title: "Channel Expansion",
-      items: [
-        "Chinese supermarkets, IGA, Foodworks",
-        "Convenience stores, F&B, and independent retailers"
-      ]
+      title: t('channelExpansionService'),
+      items: (t('channelExpansionItems') as any) || []
     },
     {
       icon: Settings,
-      title: "Operational Support", 
-      items: [
-        "3PL warehousing, logistics assessment & coordination",
-        "Local company formation & tax advisory",
-        "HR guidance and team setup support"
-      ]
+      title: t('operationalSupport'), 
+      items: (t('operationalSupportItems') as any) || []
     }
   ]
 
@@ -45,11 +33,11 @@ const ServicePortfolio = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Service <span className="hero-text">Portfolio</span>
+            {t('servicePortfolio')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-secondary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions designed to take your brand from concept to market leadership in Australia.
+            {t('servicePortfolioSubtitle')}
           </p>
         </div>
 

@@ -1,28 +1,31 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Award, Target, MapPin, TrendingUp } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const WhyWorkWithUs = () => {
+  const { t } = useLanguage();
+  
   const reasons = [
     {
       icon: Target,
-      title: "Strategic, ROI-Focused Approach",
-      description: "We prioritize measurable outcomes over vanity metrics."
+      title: t('strategicApproach'),
+      description: t('strategicApproachDesc')
     },
     {
       icon: MapPin,
-      title: "Local Market Expertise", 
-      description: "Deep knowledge of Australian retail operations and consumer behavior."
+      title: t('localExpertise'), 
+      description: t('localExpertiseDesc')
     },
     {
       icon: Award,
-      title: "End-to-End Execution",
-      description: "From strategy to on-the-ground implementation, we remove friction for your team."
+      title: t('endToEndExecution'),
+      description: t('endToEndExecutionDesc')
     },
     {
       icon: TrendingUp,
-      title: "Aligned Growth Incentives",
-      description: "Our performance-based model ensures that your success drives ours."
+      title: t('alignedIncentives'),
+      description: t('alignedIncentivesDesc')
     }
   ]
 
@@ -31,7 +34,7 @@ const WhyWorkWithUs = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-            Why Work <span className="hero-text">With Us</span>
+            {t('whyWorkWithUs')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-accent to-secondary mx-auto mb-6"></div>
         </div>
@@ -56,17 +59,17 @@ const WhyWorkWithUs = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="section-card p-12 rounded-2xl glow-effect">
             <h3 className="text-3xl font-serif font-bold mb-6">
-              Ready to scale your brand in Australia?
+              {t('readyToScale')}
             </h3>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Get in touch today and let's make your market entry seamless and impactful.
+              {t('ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="glow-effect px-8 py-4 text-lg">
-                Schedule Consultation
+                {t('scheduleConsultation')}
               </Button>
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                Download Our Portfolio
+                {t('downloadPortfolio')}
               </Button>
             </div>
           </div>
