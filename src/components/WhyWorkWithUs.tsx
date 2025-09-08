@@ -68,9 +68,6 @@ const WhyWorkWithUs = () => {
               <Button size="lg" variant="secondary" className="glow-effect px-8 py-4 text-lg">
                 {t('scheduleConsultation')}
               </Button>
-              <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                {t('downloadPortfolio')}
-              </Button>
             </div>
           </div>
         </div>
