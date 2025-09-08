@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Award, Target, MapPin, TrendingUp } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
+import ConsultationDialog from "./ConsultationDialog"
 
 const WhyWorkWithUs = () => {
   const { t } = useLanguage();
@@ -65,9 +66,11 @@ const WhyWorkWithUs = () => {
               {t('ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="glow-effect px-8 py-4 text-lg">
-                {t('scheduleConsultation')}
-              </Button>
+              <ConsultationDialog>
+                <Button size="lg" variant="secondary" className="glow-effect px-8 py-4 text-lg">
+                  {t('scheduleConsultation')}
+                </Button>
+              </ConsultationDialog>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/LanguageContext"
 import LanguageSwitcher from "./LanguageSwitcher"
+import ConsultationDialog from "./ConsultationDialog"
 
 const Navigation = () => {
   const { t } = useLanguage();
@@ -23,9 +24,11 @@ const Navigation = () => {
           
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-            <Button variant="secondary" className="glow-effect">
-              {t('getStarted')}
-            </Button>
+            <ConsultationDialog>
+              <Button variant="secondary" className="glow-effect">
+                {t('getStarted')}
+              </Button>
+            </ConsultationDialog>
           </div>
         </div>
       </div>
