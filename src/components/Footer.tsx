@@ -1,10 +1,9 @@
-import { useLanguage } from "@/contexts/LanguageContext"
-
+import { useLanguage } from "@/contexts/LanguageContext";
 const Footer = () => {
-  const { t } = useLanguage();
-  
-  return (
-    <footer id="contact" className="bg-gradient-to-t from-background via-muted/10 to-background border-t border-border">
+  const {
+    t
+  } = useLanguage();
+  return <footer id="contact" className="bg-gradient-to-t from-background via-muted/10 to-background border-t border-border">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
           <div className="space-y-4">
@@ -41,9 +40,9 @@ const Footer = () => {
             <h4 className="font-serif font-semibold text-lg">{t('contactTitle')}</h4>
             <div className="space-y-3 text-muted-foreground">
               <p>{t('sydneyAustralia')}</p>
-              <p>{t('melbourneAustralia')}</p>
-              <p className="text-accent">hello@brandbridge.com</p>
-              <p className="text-accent">+61 (0) 2 1234 5678</p>
+              
+              <p className="text-accent">hello@brandbridge.com.au</p>
+              
             </div>
           </div>
         </div>
@@ -64,8 +63,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  )
-}
-
-export default Footer
+    </footer>;
+};
+export default Footer;
